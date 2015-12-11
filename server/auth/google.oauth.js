@@ -6,6 +6,8 @@ var GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 
 var User = require('../api/users/user.model');
 
+var clientInfo = require('./clientAPIkeys.js').google;
+
 router.get('/', passport.authenticate('google', {
 	scope: 'email'
 }));
